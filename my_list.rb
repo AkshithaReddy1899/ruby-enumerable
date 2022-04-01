@@ -19,17 +19,17 @@ end
 list = MyList.new(1, 2, 3, 4)
 
 # Test #all?
-print list.all? { |e| e < 5 }
+list.all? { |e| e < 5 }
 # => true
-print list.all? { |e| e > 5 }
+list.all? { |e| e > 5 }
 # => false
 
 # Test #any?
-print list.any? { |e| e == 2 }
+list.any? { |e| e == 2 }
 # => true
-print list.any? { |e| e == 5 }
+list.any? { |e| e == 5 }
 # => false
 
 # Test #filter
-print list.filter(&:even?)
+list.filter(&:even?)
 # => [2, 4]
