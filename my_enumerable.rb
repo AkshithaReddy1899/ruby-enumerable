@@ -1,12 +1,12 @@
 module MyEnumerable
-  def all
+  def all?
     each { |n| return false unless yield n }
-    return true
+    true
   end
 
-  def any
+  def any?
     each { |n| return true if yield n }
-    return false
+    false
   end
 
   def filter
